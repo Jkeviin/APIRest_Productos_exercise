@@ -13,11 +13,13 @@ using System.Data.SqlClient;
 
 // MODELOS
 using RESTAPI_CORE.Modelos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RESTAPI_CORE.Controllers
 {
     [EnableCors("ReglasCors")]
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ProductoController : ControllerBase
     {

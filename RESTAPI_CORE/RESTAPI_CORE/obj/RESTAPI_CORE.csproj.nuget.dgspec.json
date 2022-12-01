@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj": {}
+    "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj": {
+    "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
         "projectName": "RESTAPI_CORE",
-        "projectPath": "D:\\ASP.NET\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
+        "projectPath": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
         "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\RESTAPI_CORE\\RESTAPI_CORE\\obj\\",
+        "outputPath": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -55,6 +59,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.0, )"
             }
           },
           "imports": [
