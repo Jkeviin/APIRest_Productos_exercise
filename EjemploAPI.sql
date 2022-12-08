@@ -1,3 +1,9 @@
+use master;
+go
+
+drop database EjemploAPI;
+go
+
 Create database EjemploAPI;
 go
 
@@ -150,3 +156,134 @@ go
 -- go
 select * from PRODUCTO
 go
+
+
+-------------- USUARIO
+
+create table USUARIO (
+	Id int primary key identity,
+	Correo varchar(50) unique,
+	Clave varchar(50)
+	);
+go
+
+insert into USUARIO (Correo, Clave) values
+	('kevin@gmail.com', 'kevin123');
+go
+
+create procedure sp_lista_usuarios
+as
+begin
+	transaction tx 
+		select
+		id, Correo, Clave
+	from USUARIO
+	if  @@ERROR > 0
+	begin
+	rollback transaction tx
+	select 'hubo error' as respuesta
+	end
+	else
+	begin
+	commit transaction tx
+	select 'listado de Usuario realizado con exito' as respuesta
+end
+go
+
+execute sp_lista_usuarios
+go
+
+create procedure sp_guardar_usuario(
+@Correo varchar(50),
+@Clave varchar(50)
+)as
+	begin
+	transaction tx
+		insert into 
+		USUARIO (Correo, Clave)
+		values(@Correo,@Clave)
+	if @@ERROR > 0
+	begin 
+	rollback transaction tx
+	select 'hubo error' as respuesta
+	end
+	else
+	begin
+	commit transaction tx
+	select 'Usuario guardado exitosamente' as respuesta
+	end
+go
+
+execute sp_guardar_usuario 'stiven@gmail.com', 'stiven123';
+go
+
+create procedure sp_editar_usuario(
+@Id int,
+@Correo varchar(50),
+@Clave varchar(50)
+)as
+begin
+transaction tx
+update USUARIO set
+Correo = isnull(@Correo,Correo),
+Clave = isnull(@Clave,Clave)
+where Id = @Id
+
+if @@error > 0
+
+begin
+rollback transaction tx
+select 'hubo error' as respuesta
+end
+else
+begin
+commit transaction tx
+select 'edicion exitosa' as respuesta
+end
+go
+
+execute sp_editar_usuario '1','kevin2@gmai.com', 'kevin2123'
+go 
+
+create procedure sp_eliminar_usuario(
+@id int
+)as
+begin
+transaction tx
+delete from USUARIO where Id = @id
+
+if @@error > 0
+begin
+rollback transaction tx
+select 'hubo error' as respuesta
+end
+else
+begin
+commit transaction tx
+select 'eliminacion exitosa' as respuesta
+end
+go
+
+execute sp_eliminar_usuario '1'
+go
+
+alter procedure sp_autenticar_usuario (
+@Correo varchar(50),
+@Clave varchar(50)
+)as
+    begin
+        begin transaction tx
+        if exists(select Id, Correo, Clave from USUARIO where correo = @correo and Clave = @Clave)
+        begin
+            select 'Se encontró un Usuario' as respuesta
+            commit transaction tx
+        end
+        else
+        begin
+            select 'No se encontró ningun usuario' as respuesta
+            rollback transaction tx
+        end
+    end
+go
+
+execute sp_autenticar_usuario 'kevi0n@gmail.com', 'kevin123'

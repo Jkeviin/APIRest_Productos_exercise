@@ -1,8 +1,7 @@
-﻿namespace RESTAPI_CORE.Modelos
+﻿namespace RESTAPI_CORE.Modelos.DTO
 {
-    public class Usuario
+    public class UsuarioDTO
     {
-        public int Id { get; set; }
         public string correo { get; set; }
         public string clave { get; set; }
     }

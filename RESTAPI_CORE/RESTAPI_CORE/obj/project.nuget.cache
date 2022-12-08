@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XjBjOeFMpEnNGvV5nLBYNER+BtqBYxGsOnlDifi4ClgjVo6O4gd33ZZVBq77+o9BfboolFQzeDc3U/AqXPZMCA==",
+  "dgSpecHash": "4hm+z5I1uUl3D8w5zRqc5tB4xhlVj1wActtWy1TSmOUN0MZxOV8ULEkE1sJFyAG8UTQ+r9BJVUl4lLfSAweuog==",
   "success": true,
-  "projectFilePath": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
+  "projectFilePath": "D:\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kevin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Kevin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

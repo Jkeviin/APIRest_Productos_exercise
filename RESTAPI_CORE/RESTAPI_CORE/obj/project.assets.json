@@ -3035,11 +3035,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
+      "projectUniqueName": "D:\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
       "projectName": "RESTAPI_CORE",
-      "projectPath": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
+      "projectPath": "D:\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\RESTAPI_CORE.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP.NET\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\obj\\",
+      "outputPath": "D:\\APIRest_Productos_exercise\\RESTAPI_CORE\\RESTAPI_CORE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
